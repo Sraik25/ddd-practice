@@ -1,5 +1,5 @@
 import { Response, Request, Router } from 'express';
-import CoursePutController from '../controllers/CoursePutController';
+import { CoursePutController } from '../controllers/CoursePutController';
 import container from '../dependency-injection';
 
 export const register = (router: Router) => {
