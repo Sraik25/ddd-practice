@@ -1,4 +1,4 @@
-import { CourseCreator } from '../../../../../src/Contexts/Mooc/Courses/application/CourseCreator';
+import CourseCreator from '../../../../../src/Contexts/Mooc/Courses/application/CourseCreator';
 import { Course } from '../../../../../src/Contexts/Mooc/Courses/domain/Course';
 import { CourseRepository } from '../../../../../src/Contexts/Mooc/Courses/domain/CourseRepository';
 
