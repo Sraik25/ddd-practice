@@ -18,7 +18,11 @@ import { Uuid } from '../../../../../../src/Contexts/Shared/domain/value-object/
 describe('SaveCourse', () => {
   it('should have a course', async () => {
     const repository = new FileCourseRepository();
-    const course = new Course(new Uuid('0766c602-d4d4-48b6-9d50-d3253123275e'), 'name', ' duration');
+    const course = new Course({
+      id: new Uuid('0766c602-d4d4-48b6-9d50-d3253123275e'),
+      name: 'name',
+      duration: 'duration'
+    });
 
     await repository.save(course);
   });

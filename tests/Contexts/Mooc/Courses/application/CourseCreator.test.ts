@@ -17,7 +17,7 @@ describe('CourseCreator', () => {
     const name = 'some-name';
     const duration = 'some-duration';
 
-    const expectedCourse = new Course(id, name, duration);
+    const expectedCourse = new Course({ id, name, duration });
 
     await creator.run({ id: id.value, name, duration });
 
