@@ -1,4 +1,3 @@
-import { MongoClient } from 'mongodb';
 import { Nullable } from '../../../../Shared/domain/Nullable';
 import { MongoRepository } from '../../../../Shared/infrastructure/persistence/mongo/MongoRepository';
 import { CourseId } from '../../../Shared/domain/Courses/CourseId';
