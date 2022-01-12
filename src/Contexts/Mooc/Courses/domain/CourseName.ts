@@ -1,7 +1,7 @@
-import { StringValueObject } from '../../../Shared/domain/value-object/StringValueObject';
+import { ValueObject } from '../../../Shared/domain/value-object/ValueObject';
 import { CourseNameLengthExceeded } from './CourseNameLengthExceeded';
 
-export class CourseName extends StringValueObject {
+export class CourseName extends ValueObject<string> {
   constructor(value: string) {
     super(value);
 
