@@ -7,7 +7,7 @@ services:
   Mooc.ConnectionManager:
     factory:
       class: ../../../../../Contexts/Shared/infrastructure/persistence/mongo/MongoClientFactory
-      method: 'createConfig'
+      method: 'createClient'
     arguments: ['mooc', '@Mooc.MongoConfig']
 
   Mooc.Courses.domain.CourseRepository:
