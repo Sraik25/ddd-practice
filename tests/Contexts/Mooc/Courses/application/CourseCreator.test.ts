@@ -1,5 +1,6 @@
 import CourseCreator from '../../../../../src/Contexts/Mooc/Courses/application/CourseCreator';
 import { CourseNameLengthExceeded } from '../../../../../src/Contexts/Mooc/Courses/domain/CourseNameLengthExceeded';
+import { MotherCreator } from '../../../Shared/domain/MotherCreator';
 import { CourseMother } from '../domain/CourseMother';
 import { CourseRepositoryMock } from '../__mocks__/CourseRepositoryMock';
 import { CreateCourseRequestMother } from './CreateCourseRequestMother';
@@ -33,5 +34,19 @@ describe('CourseCreator', () => {
 
       repository.assertLastSavedCourseIs(course);
     }).toThrow(CourseNameLengthExceeded);
+  });
+});
+
+describe('CourseCreator2', () => {
+  it('should create a valid course', async () => {
+    const request = {
+      id: '36d20509-b98f-476b-88f4-037d9ee256fc',
+      duration: '2h 30m',
+      name: MotherCreator.random().lorem.sentence()
+    };
+
+    console.log(request.name.length);
+
+    await creator.run(request);
   });
 });
